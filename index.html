@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning LocoMan skills from human demonstrations.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human2LocoMan</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/human2locoman_icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Human2LocoMan: Learning Versatile Quadrupedal Manipulation with Human Pretraining</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous Authors</span>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://human2bots.github.io/static/pdfs/human2locoman_rss_2025.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+              <span class="link-block">
+                <a class="button is-normal is-rounded is-dark disabled" role="button">
+                  <!-- <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span> -->
+                  <span>Paper and Code coming soon</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- <p>
+            We present Human2X, a novel framework for scalable teleoperation, data collection, and imitation learning. 
+            We leverage VR headsets like Apple Vision Pro to enable immersive human teleopration on robot embodiments
+            distinct from humans, including LocoMan and xArm. The teleoperation system is user-friendly and allows 
+            efficient data collection that is otherwise time-consuming with the usual remote control. We also develop an
+            imitation learning framework for learning robot skills from the collected teleoperated data, which can jointly
+            from easily sourced human videos to further scale up training. We demonstrate the effectiveness of our approach
+            on a variety of tasks and robot embodiments. 
+          </p> -->
+          <p>Quadrupedal robots have demonstrated impressive locomotion capabilities in complex environments, but equipping them with autonomous versatile manipulation skills in a scalable way remains a significant challenge. In this work, we introduce a system that integrates data collection and imitation learning from both humans and LocoMan, a quadrupedal robot with multiple manipulation modes. Specifically, we introduce a teleoperation and data collection pipeline, supported by dedicated hardware, which unifies and modularizes the observation and action spaces of the human and the robot. To effectively leverage the collected data, we propose an efficient learning architecture that supports co-training and pretraining with multimodal data across different embodiments. Additionally, we construct the first manipulation dataset for the LocoMan robot, covering various household tasks in both unimanual and bimanual modes, supplemented by a corresponding human dataset. Experimental results demonstrate that our data collection and training framework significantly improves the efficiency and effectiveness of imitation learning, enabling more versatile quadrupedal manipulation capabilities. 
+          </p>
+          <img src="./static/images/system_overview.png"
+               class="arch-image"
+               alt="Learning Framework"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column content">
+        <h2 class="title is-3">Teleoperation & Data Collection System</h2>
+        <div class="content has-text-justified">
+          <p>
+            <!-- Our teleoperation system is built upon <a href="https://robot-tv.github.io/">Open-Television</a>. By leveraging
+            the head and hand tracking capabilities of the Apple Vision Pro, we enable immersive human teleoperation with 
+            visual feedback on robot embodiments such as LocoMan. This system allows collecting data on the robot at least
+            4x faster than using a traditional remote control. -->
+            We develop a unified system for both robot teleoperation and human data collection.
+            Our teleoperation system controls the 6D poses of end-effectors, gripper actions, and the rigid body where the stereo camera is mounted (the torso of LocoMan, the head of human). 
+            The coordination of whole-body motions expand the workspace and camera sensing ranges. Our teleoperation system is fast-response, stable, and user frendly, 
+            by incorporating interpolations for fast movements, handles and recovery from self-collisions, singularity, ground-collisions, and joint limits.
+          </p>
+
+          <!-- Wrap videos in a Bulma columns layout -->
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/toy_collect_bimanual_teleop.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/toy_collect_unimanual_teleop.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video id="robot_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/pour_bimanual_teleop.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/shoe_org_unimanual_teleop.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/drawer_org_unimanual_teleop.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <p>
+            <!-- Apple Vision Pro is also used for collecting human videos with captured hand motions. Through the simple interface we designed,
+            a human operator can easily collect dozens of trajectories by themselves within minutes. -->
+            We mount a stereo camera on the VR set to collect first-person view of human videos and capture human's hand and head motions 
+            within a unified coordinate frames as the robot embodiments.
+            Through the simple interface we designed, a human operator without robot access can easily collect dozens of trajectories by themselves within minutes.
+          </p>
+
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/toy_collect_bimanual_human.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/shoe_org_unimanual_human.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video id="robot_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/pour_bimanual_human.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/toy_collect_bimanual_human_fpv.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/shoe_org_unimanual_human_fpv.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video id="robot_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/pour_bimanual_human_fpv.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Modularized Cross-Embodiment Transformer (MXT)</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our learning framework is designed to efficiently use data from both human and robot sources.
+            We propose a modularized design Modularized Cross-Embodiment Transformer (MXT). MXT consists mainly of three groups of modules: tokenizers, transformer trunk, and detokenizers. 
+            The tokenizers act as encoders and map embodiment-specific observations to tokens in the latent space, and the detokenizers translate the output tokens from the trunk to actions in the action space of each embodiment. The tokenizers and detokenizers are specific to one embodiment and are reinitialized for each new embodiment, while the trunk is shared across all embodiments and reused for transferring the policy among embodiments.
+          </p>
+          <p>
+            <!-- Different from recent works that utilize a similar modularization for large-scale pretraining, we focus on 
+            leveraging data from a few other embodiments to improve the learning performance in the target domain. This
+            allows us to perform modality alignment on a finer granularity and use separate tokenizers/detokenizers 
+            for each modality from one embodiment. -->
+          </p>
+          <img src="./static/images/model_arch.png"
+               class="arch-image"
+               alt="Learning Framework"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">MXT Policy Rollouts</h3>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/toy_collect_unimanual_rollout.mp4" type="video/mp4">
+        </video>
+        <!-- <h4 class="title is-5">Unimanual Toy Collection</h4> -->
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/toy_collect_bimanual_rollout.mp4" type="video/mp4">
+        </video>
+        <!-- <h4 class="title is-5">Bimanual Toy Collection</h4> -->
+      </div>
+    </div>
+      
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/shoe_org_unimanual_rollout.mp4" type="video/mp4">
+        </video>
+        <!-- <h4 class="title is-5">Unimanual Shoe Rack Organization</h4> -->
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/new/mxt_bimanual_shoe_org.mp4" type="video/mp4">
+        </video>
+        <!-- <h4 class="title is-5">Bimanual Pouring</h4> -->
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/new/mxt_scoop.mp4" type="video/mp4">
+        </video>
+        <!-- <h4 class="title is-5">Unimanual Shoe Rack Organization</h4> -->
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/new/mxt_60_pour_part1.mp4" type="video/mp4">
+        </video>
+        <!-- <h4 class="title is-5">Bimanual Pouring</h4> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Robust to OOD Objects</h3>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/shoe_org_unimanual_ood_mxt.mp4" type="video/mp4">
+        </video>
+        <h4 class="title is-5">MXT</h4>
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/shoe_org_unimanual_ood_mxt_no_pretrain.mp4" type="video/mp4">
+        </video>
+        <h4 class="title is-5">MXT (not pretrained)</h4>
+      </div>
+    </div>
+      
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/new/mxt_60_pour_part2_ood.mp4" type="video/mp4">
+        </video>
+        <h4 class="title is-5">MXT</h4>
+      </div>
+      <div class="column">
+        <video id="main_demo" autoplay controls muted loop playsinline width="100%", style="border-radius: 12px; overflow: hidden;">
+          <source src="./static/videos/new/hit_60_pour_ood.mp4" type="video/mp4">
+        </video>
+        <h4 class="title is-5">HIT</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Data-Efficient Finetuning</h3>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/mxt_2min_toy_collect_unimanual_rollout.mp4" type="video/mp4">
+          </video>
+          <h4 class="title is-5">MXT, finetuned with 2-min robot data (success 5/5)</h4>
+        </div>
+        <div class="column">
+          <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/mxt_scratch_4min_toy_collect_unimanual_rollout.mp4" type="video/mp4">
+          </video>
+          <h4 class="title is-5">MXT (not pretrained), trained with 4-min robot data (success 2/5)</h4>
+        </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Locomotion + Manipulation</h3>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <video id="main_demo" autoplay controls muted loop playsinline width="60%">
+            <source src="./static/videos/new/locomotion_toy_collect_larger.mp4" type="video/mp4">
+          </video>
+          <h4 class="title is-5">Unimanual toy collection with locomotion</h4>
+        </div>
+    </div>
+  </div>
+
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            <!-- This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website. -->
+            Template borrowed from <a href="https://nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
