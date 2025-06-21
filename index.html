@@ -8,19 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Human2LocoMan</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script> -->
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -39,6 +26,17 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    .human-data {
+      color: #3A7E22; /* Choose your preferred color */
+    }
+
+    .robot-data {
+      color: #8B51D2; /* Choose your preferred color */
+    }
+  </style>
+
 </head>
 <body>
 
@@ -50,35 +48,6 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <!-- <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div> -->
-
   </div>
 </nav>
 
@@ -91,14 +60,52 @@
           <h1 class="title is-1 publication-title">Human2LocoMan: Learning Versatile Quadrupedal Manipulation with Human Pretraining</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Anonymous Authors</span>
+              <a href="https://yaruniu.com/">Yaru Niu</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              Yunzhe Zhang<sup>1,*</sup>,</span>
+            <span class="author-block">
+              Mingyang Yu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://linchangyi1.github.io/">Changyi Lin</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Chenhao Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=7ZZ9fOIAAAAJ&hl=zh-CN">Yikai Wang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://yxyang.github.io/">Yuxiang Yang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://wenhaoyu.weebly.com/">Wenhao Yu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://research.google/people/tingnanzhang/?&type=google">Tingnan Zhang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=LYt_2MgAAAAJ&hl=en">Bingqing Chen</a><sup>3</sup>,
             </span>
+            <span class="author-block">
+              <a href="https://jonfranc.com/">Jonathan Francis</a><sup>1,3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=6LYI6uUAAAAJ&hl=en">Zhenzhen Li</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.jie-tan.net/">Jie Tan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.meche.engineering.cmu.edu/directory/bios/zhao-ding.html">Ding Zhao</a><sup>1</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Carnegie Mellon University,</span>
+            <span class="author-block"><sup>2</sup>Google DeepMind</span>
+            <span class="author-block"><sup>3</sup>Bosch Center for Artificial Intelligence</span>
+          </div>
+          <div class="is-size-5 publication-authors" style="margin-top: 0.75em;">
+            <span class="author-block">Robotics: Science and Systems (RSS) 2025</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <!-- <span class="link-block">
+              <span class="link-block">
                 <a href="https://human2bots.github.io/static/pdfs/human2locoman_rss_2025.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -106,7 +113,7 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span> -->
+              </span>
               <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -150,7 +157,7 @@
                   <!-- <span class="icon">
                       <i class="fab fa-github"></i>
                   </span> -->
-                  <span>Paper and Code coming soon</span>
+                  <span>Code coming soon</span>
                   </a>
               </span>
             </div>
@@ -162,23 +169,6 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section> -->
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -186,20 +176,36 @@
       <div class="column">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- <p>
-            We present Human2X, a novel framework for scalable teleoperation, data collection, and imitation learning. 
-            We leverage VR headsets like Apple Vision Pro to enable immersive human teleopration on robot embodiments
-            distinct from humans, including LocoMan and xArm. The teleoperation system is user-friendly and allows 
-            efficient data collection that is otherwise time-consuming with the usual remote control. We also develop an
-            imitation learning framework for learning robot skills from the collected teleoperated data, which can jointly
-            from easily sourced human videos to further scale up training. We demonstrate the effectiveness of our approach
-            on a variety of tasks and robot embodiments. 
-          </p> -->
-          <p>Quadrupedal robots have demonstrated impressive locomotion capabilities in complex environments, but equipping them with autonomous versatile manipulation skills in a scalable way remains a significant challenge. In this work, we introduce a system that integrates data collection and imitation learning from both humans and LocoMan, a quadrupedal robot with multiple manipulation modes. Specifically, we introduce a teleoperation and data collection pipeline, supported by dedicated hardware, which unifies and modularizes the observation and action spaces of the human and the robot. To effectively leverage the collected data, we propose an efficient learning architecture that supports co-training and pretraining with multimodal data across different embodiments. Additionally, we construct the first manipulation dataset for the LocoMan robot, covering various household tasks in both unimanual and bimanual modes, supplemented by a corresponding human dataset. Experimental results demonstrate that our data collection and training framework significantly improves the efficiency and effectiveness of imitation learning, enabling more versatile quadrupedal manipulation capabilities. 
+          <p>Quadrupedal robots have demonstrated impressive locomotion capabilities in complex environments, but equipping them with autonomous versatile manipulation skills in a scalable way remains a significant challenge. In this work, we introduce a cross-embodiment imitation learning system for quadrupedal manipulation, leveraging data collected from both humans and LocoMan, a quadruped equipped with multiple manipulation modes. Specifically, we develop a teleoperation and data collection pipeline, which unifies and modularizes the observation and action spaces of the human and the robot. To effectively leverage the collected data, we propose an efficient modularized architecture that supports co-training and pretraining on structured modality-aligned data across different embodiments. Additionally, we construct the first manipulation dataset for the LocoMan robot, covering various household tasks in both unimanual and bimanual modes, supplemented by a corresponding human dataset. We validate our system on six real-world manipulation tasks, where it achieves an average success rate improvement of 41.9% overall and 79.7% under out-of-distribution (OOD) settings compared to the baseline. Pretraining with human data contributes a 38.6% success rate improvement overall and 82.7% under OOD settings, enabling consistently better performance with only half the amount of robot data.
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">System Overview</h2>
+        <div class="content has-text-justified">
           <img src="./static/images/system_overview.png"
                class="arch-image"
                alt="Learning Framework"/>
+<p>
+  Our system uses an XR headset for data collection, capturing egocentric 
+  <span class="human-data">human data</span> and teleoperated 
+  <span class="robot-data">robot data</span>, all mapped to a unified coordinate frame. 
+  The dataset consists of aligned vision, proprioception, and actions from the 
+  <span class="human-data">human</span> and the 
+  <span class="robot-data">robot</span>. 
+  We adopt a two-stage training process: the modularized cross-embodiment model is first pretrained on easy-to-collect 
+  <span class="human-data">human data</span>, and then finetuned on a small amount of 
+  <span class="robot-data">robot data</span>. 
+  The resulting Human2LocoMan policies can be deployed on real robots for versatile manipulation tasks in both unimanual and bimanual modes.
+</p>
         </div>
       </div>
     </div>
@@ -247,6 +253,11 @@
             <div class="column">
               <video id="main_demo" autoplay controls muted loop playsinline width="100%">
                 <source src="./static/videos/shoe_org_unimanual_teleop.mp4" type="video/mp4">
+              </video>
+            </div>
+              <div class="column">
+              <video id="main_demo" autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/new/tossing_teleop.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column">
@@ -315,15 +326,7 @@
         <h2 class="title is-3">Modularized Cross-Embodiment Transformer (MXT)</h2>
         <div class="content has-text-justified">
           <p>
-            Our learning framework is designed to efficiently use data from both human and robot sources.
-            We propose a modularized design Modularized Cross-Embodiment Transformer (MXT). MXT consists mainly of three groups of modules: tokenizers, transformer trunk, and detokenizers. 
-            The tokenizers act as encoders and map embodiment-specific observations to tokens in the latent space, and the detokenizers translate the output tokens from the trunk to actions in the action space of each embodiment. The tokenizers and detokenizers are specific to one embodiment and are reinitialized for each new embodiment, while the trunk is shared across all embodiments and reused for transferring the policy among embodiments.
-          </p>
-          <p>
-            <!-- Different from recent works that utilize a similar modularization for large-scale pretraining, we focus on 
-            leveraging data from a few other embodiments to improve the learning performance in the target domain. This
-            allows us to perform modality alignment on a finer granularity and use separate tokenizers/detokenizers 
-            for each modality from one embodiment. -->
+            Our learning framework is designed to efficiently utilize data from both human and robot sources, and account for modality-specific distributions unique to each embodiment. We propose a modularized design Modularized Cross-Embodiment Transformer (MXT). MXT consists mainly of three groups of modules: tokenizers, Transformer trunk, and detokenizers. The tokenizers act as encoders and map embodiment-specific observation modalities to tokens in the latent space, and the detokenizers translate the output tokens from the trunk to action modalities in the action space of each embodiment. The tokenizers and detokenizers are specific to one embodiment and are reinitialized for each new embodiment, while the trunk is shared across all embodiments and reused for transferring the policy among embodiments. 
           </p>
           <img src="./static/images/model_arch.png"
                class="arch-image"
@@ -472,7 +475,84 @@
         </div>
       </div>
   </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Quantitative Results</h2>
+        <h3 class="title is-4">Evaluation on Six Real-World Tasks</h3>
+        <div class="content has-text-justified">
+<p>
+  We report success rate (SR) ↑ in % and task score (TS) ↑ for each task.
+  We highlight the best performance in <strong>bold</strong> and the second best in <u>underline</u>.
+  ID results are based on 24 trials, and OOD results on 12 trials.
+</p> 
+          <img src="./static/images/main_results.png"
+               class="arch-image"
+               alt="Learning Framework"/>
+<ul>
+  <li>
+    <strong>Robust versatile manipulation:</strong> MXT achieves an average success rate improvement of 41.9% overall and 79.7% under out-of-distribution (OOD) settings over six tasks compared to the baseline.
+  </li>
+  <li>
+    <strong>Effective human data pretraining:</strong> Pretraining with human data contributes a 38.6% success rate improvement overall and 82.7% under OOD settings, enabling consistently better performance with only half the amount of robot data.
+  </li>
+</ul>
+      </div>
+        <h3 class="title is-4">Ablation Study</h3>
+        <div class="content has-text-justified">
+<p>
+  We compare MXT, its ablation MXT-Agg, and the baseline HPT on SR and TS. 
+  Here, <q>L</q> denotes the larger training set (40 trajectories for TC-Uni, 60 trajectories for TC-Bi), 
+  while <q>S</q> denotes the smaller training set (20 trajectories for TC-Uni, 30 trajectories for TC-Bi).
+</p>
+
+          <img src="./static/images/ablation.png"
+               class="arch-image"
+               alt="Learning Framework"/>
+<ul>
+  <li>
+    <strong>Finetuning visual encoders</strong> improves in-domain performance but may harm cross-embodiment transfer.
+  </li>
+  <li>
+    <strong>The modular design</strong> including modularized data and tokenization facilitates positive transfer from <span class="human-data">human</span> to <span class="robot-data">LocoMan</span>.
+
+  </li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Acknowledgement</h2>
+        <div class="content has-text-justified">
+          <p>We thank Jianzhe Gu for the initial camera mount design. We are grateful to Yifeng Zhu, Xuxin Cheng, and Xiaolong Wang for their valuable discussions and constructive feedback. We also thank Alan Wang for his support during our experiments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{niu2025human2locoman,
+  title={Human2LocoMan: Learning Versatile Quadrupedal Manipulation with Human Pretraining},
+  author={Niu, Yaru and Zhang, Yunzhe and Yu, Mingyang and Lin, Changyi and Li, Chenhao and Wang, Yikai and Yang, Yuxiang and Yu, Wenhao and Zhang, Tingnan and Li, Zhenzhen and Tan, Jie and Zhao, Ding},
+  booktitle={Robotics: Science and Systems (RSS)},
+  year={2025}
+}</code></pre>
+  </div>
 </section>
 
 <footer class="footer">
